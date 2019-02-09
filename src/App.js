@@ -1,24 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import H2 from './Compenent/H2';
 import './App.css';
 
+
 class App extends Component {
+  
   render() {
+    function Welcome(props,s2="Kazar") {
+      return <h1>Hello, {props} { s2 } </h1>;
+    }
+    let a = <a href="http://www.jeuxvideo.com/"></a>
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+          { Welcome ("billy","12") }
+            Edit <code>src/App.js</code>
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
         </header>
       </div>
     );

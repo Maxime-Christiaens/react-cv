@@ -1,9 +1,5 @@
-.App {
-  text-align: center;
-}
-
-.App-header {
-  background-color: #282c34;
+.FirstPage {
+  background-color: #283C4E;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,9 +11,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }

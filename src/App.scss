@@ -4,6 +4,16 @@ $bgcolor1 : #283C4E;
 $bgcolor2 : #223342;
 $color1 : #DAC1A6;
 
+h1{
+  font-size : 9vh;
+  margin-top : 18vh;
+}
+h2{
+  font-size : 5vh;
+  color: $color1;
+  font-style : italic;
+}
+
 .FirstPage {
   background-color: $bgcolor2;
   color: white;
@@ -12,37 +22,56 @@ $color1 : #DAC1A6;
   display: flex;
   flex-direction: column;
   align-items: center;
-  h1{
-    font-size : 9vh;
-    margin-top : 18vh;
-  }
-  h2{
-    font-size : 5vh;
-    color: $color1;
-    font-style : italic;
+  .button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }
 
-
+.slide{
+  animation: up 1s ease-in-out 1s;
+  background-color: $bgcolor1;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+}
 
 ////////////////////////////////////
 //Animation
 ///////////////////////////////////
 .ouverture{
-  animation: spin 1.5s 0s ease-in ;
+  animation: spin 2s 0s ease-in ;
 }
 .fermuture{
   //alternate-reverse permet de faire l'animation inverse
-  animation: spin 1.5s 0s ease-in alternate-reverse;
+  animation: spin 2s 0s ease-in alternate-reverse;
 }
 
 @keyframes spin {
-  from {
+  0% {
     transform: perspective(100vh) rotateX(0deg);
     //transform: rotate(0deg);
   }
-  to {
-    transform: perspective(100vh) rotateX(-20deg);
+  100% {
+    transform: perspective(100vh) rotateX(-30deg);
+    //transform: rotate(360deg);
+  }
+}
+
+@keyframes up {
+  0% {
+    top: 100%;
+    //transform: rotate(0deg);
+  }
+  100% {
+    top: 0%;
     //transform: rotate(360deg);
   }
 }

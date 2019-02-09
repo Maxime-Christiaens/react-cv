@@ -1,3 +1,14 @@
+h1 {
+  font-size: 9vh;
+  margin-top: 18vh;
+}
+
+h2 {
+  font-size: 5vh;
+  color: #DAC1A6;
+  font-style: italic;
+}
+
 .FirstPage {
   background-color: #223342;
   color: white;
@@ -15,45 +26,89 @@
           align-items: center;
 }
 
-.FirstPage h1 {
-  font-size: 9vh;
-  margin-top: 18vh;
+.FirstPage .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.FirstPage h2 {
-  font-size: 5vh;
-  color: #DAC1A6;
-  font-style: italic;
+.slide {
+  -webkit-animation: up 1s ease-in-out 1s;
+          animation: up 1s ease-in-out 1s;
+  background-color: #283C4E;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 100%;
 }
 
 .ouverture {
-  -webkit-animation: spin 1.5s 0s ease-in;
-          animation: spin 1.5s 0s ease-in;
+  -webkit-animation: spin 2s 0s ease-in;
+          animation: spin 2s 0s ease-in;
 }
 
 .fermuture {
-  animation: spin 1.5s 0s ease-in alternate-reverse;
+  animation: spin 2s 0s ease-in alternate-reverse;
 }
 
 @-webkit-keyframes spin {
-  from {
+  0% {
     -webkit-transform: perspective(100vh) rotateX(0deg);
             transform: perspective(100vh) rotateX(0deg);
   }
-  to {
-    -webkit-transform: perspective(100vh) rotateX(-20deg);
-            transform: perspective(100vh) rotateX(-20deg);
+  100% {
+    -webkit-transform: perspective(100vh) rotateX(-30deg);
+            transform: perspective(100vh) rotateX(-30deg);
   }
 }
 
 @keyframes spin {
-  from {
+  0% {
     -webkit-transform: perspective(100vh) rotateX(0deg);
             transform: perspective(100vh) rotateX(0deg);
   }
-  to {
-    -webkit-transform: perspective(100vh) rotateX(-20deg);
-            transform: perspective(100vh) rotateX(-20deg);
+  100% {
+    -webkit-transform: perspective(100vh) rotateX(-30deg);
+            transform: perspective(100vh) rotateX(-30deg);
+  }
+}
+
+@-webkit-keyframes up {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+@keyframes up {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0%;
   }
 }
 /*# sourceMappingURL=App.css.map */

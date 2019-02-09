@@ -1,26 +1,49 @@
 
 //Variable scss 
-$bgcolor : #283C4E;
+$bgcolor1 : #283C4E;
+$bgcolor2 : #223342;
+$color1 : #DAC1A6;
 
 .FirstPage {
-  background-color: $bgcolor;
+  background-color: $bgcolor2;
+  color: white;
   height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  h1{
+    font-size : 9vh;
+    margin-top : 18vh;
+  }
+  h2{
+    font-size : 5vh;
+    color: $color1;
+    font-style : italic;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+
+
+////////////////////////////////////
+//Animation
+///////////////////////////////////
+.ouverture{
+  animation: spin 1.5s 0s ease-in ;
+}
+.fermuture{
+  //alternate-reverse permet de faire l'animation inverse
+  animation: spin 1.5s 0s ease-in alternate-reverse;
 }
 
-@keyframes App-logo-spin {
+@keyframes spin {
   from {
-    transform: rotate(0deg);
+    transform: perspective(100vh) rotateX(0deg);
+    //transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: perspective(100vh) rotateX(-20deg);
+    //transform: rotate(360deg);
   }
 }
+

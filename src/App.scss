@@ -30,8 +30,8 @@ h2{
   }
 }
 
-.slide{
-  animation: up 1s ease-in-out 1s;
+section{
+  //animation: up 1s ease-in-out 1s;
   background-color: $bgcolor1;
   color: white;
   height: 100vh;
@@ -43,18 +43,23 @@ h2{
   top: 100%;
 }
 
-////////////////////////////////////
-//Animation
-///////////////////////////////////
-.ouverture{
-  animation: spin 2s 0s ease-in ;
+/////////////
+//Animation//
+/////////////
+
+////////////////////
+//Pour la first-page
+
+.opening{
+  //forwards = reste à l'état final de l'animation après l'avoir exécuter
+  animation: opening 1s 0s ease-in forwards;
 }
-.fermuture{
-  //alternate-reverse permet de faire l'animation inverse
-  animation: spin 2s 0s ease-in alternate-reverse;
+.closing{
+  //alternate-reverse = permet de faire l'animation inverse
+  animation: closing 1s 0s ease-in forwards;
 }
 
-@keyframes spin {
+@keyframes opening {
   0% {
     transform: perspective(100vh) rotateX(0deg);
     //transform: rotate(0deg);
@@ -65,14 +70,41 @@ h2{
   }
 }
 
+@keyframes closing {
+  0% {
+    transform: perspective(100vh) rotateX(-30deg);
+  }
+  100% {
+    transform: perspective(100vh) rotateX(0deg);
+  }
+}
+
+/////////////////
+//pour les slides
+
+.up{
+  animation: up 0.5s 0.5s ease-in-out forwards;
+}
+
+.down{
+  animation: down 0.5s 0s ease-out forwards;
+}
+
 @keyframes up {
   0% {
     top: 100%;
-    //transform: rotate(0deg);
   }
   100% {
     top: 0%;
-    //transform: rotate(360deg);
+  }
+}
+
+@keyframes down {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;
   }
 }
 

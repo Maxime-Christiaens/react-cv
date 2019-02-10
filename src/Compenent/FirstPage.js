@@ -11,6 +11,7 @@ export default class FirstPage extends Component {
         this.state = {
             FirstPageAnimation : "",
             Animation : "",
+            id : "nope"
         };
     }
     //Animations de la page d'acceuil
@@ -25,37 +26,22 @@ export default class FirstPage extends Component {
         })
     }
     //Animation des slides
-    //Rework Needed
-    up1 = () => {
+    up = () => {
         this.setState({
-            Animation : "up1",
+            Animation : "up",
         })
       }
-    up2 = () => {
+
+    down = () => {
         this.setState({
-            Animation : "up2",
-        })
-      }
-    up3 = () => {
-        this.setState({
-            Animation : "up3",
-        })
-      }
-    //Rework Needed
-    down1 = () => {
-        this.setState({
-            Animation : "down1"
+            Animation : "down"
         })
     }
-    down2 = () => {
+    //the id
+    id = (e) => {
         this.setState({
-            Animation : "down2"
-        })
-    }
-    down3 = () => {
-        this.setState({
-            Animation : "down3"
-        })
+            id : e
+        })      
     }
     
     render() {
@@ -68,27 +54,13 @@ export default class FirstPage extends Component {
             FirstPage = "FirstPage closing"
         }
         //slideAnimation
-        //Rework Nedeed
-        let slideClass1 ="slide"
-        let slideClass2 ="slide"
-        let slideClass3 ="slide"
-        if(this.state.Animation == "up1"){
-            slideClass1 = "slide up"
+
+        let slideClass ="slide"
+        if(this.state.Animation == "up"){
+            slideClass = "slide up"
         }
-        else if(this.state.Animation == "up2"){
-            slideClass2 = "slide up"
-        }
-        else if(this.state.Animation == "up3"){
-            slideClass3 = "slide up"
-        }
-        else if (this.state.Animation == "down1"){
-            slideClass1 = "slide down"
-        }
-        else if (this.state.Animation == "down2"){
-            slideClass2 = "slide down"
-        }
-        else if (this.state.Animation == "down3"){
-            slideClass3 = "slide down"
+        else if (this.state.Animation == "down"){
+            slideClass = "slide down"
         }
         return (
             <Fragment>
@@ -97,18 +69,21 @@ export default class FirstPage extends Component {
                     { this.props.h1 /*h1 */ }
                 </h1>
                 <h2>
+                    id = { this.state.id } et slideClass = { slideClass }
+                </h2>
+                <h2>
                     { this.props.h2 /*Mise en place d'un props qui h2 qui contiendra ce qu'on désire */ }
                 </h2>
                 <div className="button">
-                    <button onClick={ () => { this.FirstPageOpening(); this.up1(); } }>Start1</button>
-                    <button onClick={ () => { this.FirstPageOpening(); this.up2(); } }>Start2</button>
-                    <button onClick={ () => { this.FirstPageOpening(); this.up3(); } }>Start3</button>
+                    <button onClick={ () => { this.FirstPageOpening(); this.up(); this.id(1) } }>Start1</button>
+                    <button onClick={ () => { this.FirstPageOpening(); this.up(); this.id(2) } }>Start2</button>
+                    <button onClick={ () => { this.FirstPageOpening(); this.up(); this.id(3) /*Cette methode me permet de récupérer un "id" me permettant par la suite d'activer le slide correspondant */ } }>Start3</button>
                 </div>
                 <p></p>
             </div>
-            <Slide id="1" ClassName={ slideClass1 } onClick={ () => { this.FirstPageClosing(); this.down1()} } h2="hello billy1" />
-            <Slide id="2" ClassName={ slideClass2 } onClick={ () => { this.FirstPageClosing(); this.down2()} } h2="hello billy2" />
-            <Slide id="3" ClassName={ slideClass3 } onClick={ () => { this.FirstPageClosing(); this.down3()} } h2="hello billy3" />
+            <Slide ClassName={ this.state.id=="1"?slideClass:"" /* La récupération de l'id me permet de choisir lequelle des slides doit être activer */} onClick={ () => { this.FirstPageClosing(); this.down()} } h2="hello billy1" />
+            <Slide ClassName={ this.state.id=="2"?slideClass:"" } onClick={ () => { this.FirstPageClosing(); this.down() } } h2="hello billy2" />
+            <Slide ClassName={ this.state.id=="3"?slideClass:"" } onClick={ () => { this.FirstPageClosing(); this.down() } } h2="hello billy3" />
             </Fragment>
         );
     }

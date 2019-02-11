@@ -2,6 +2,7 @@
 $bgcolor1 : #283C4E;
 $bgcolor2 : #223342;
 $color1 : #DAC1A6;
+$color2 : #B89D8B;
 //Variable media-query 
 $responsive : "screen and (min-width: 200px) and (max-width: 640px)";
 
@@ -21,6 +22,13 @@ h2{
 .flex-row-center{
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column-center{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -57,7 +65,7 @@ h2{
       margin-top : 2vh;
       font-size: 5vh;
       &:hover{
-        color: $color1;
+        color: $color2;
       }
     }
   }
@@ -74,6 +82,60 @@ section{
   align-items: center;
   position: absolute;
   top: 100%;
+  h2{
+    margin-top: 10vh!important;
+    color: white;
+    text-transform: uppercase!important;
+  }
+  a{
+    text-decoration: none;
+    color: rgb(170, 165, 165);
+  }
+  //
+  .formation{
+    h3{
+      margin-top: 6vh;
+      margin-bottom: 4vh;
+    }
+    h4{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    h5{
+      margin-top: 3vh;
+      margin-bottom: 3vh;
+    }
+    .part1{
+      width: 60%;
+      margin: auto;
+      text-align: center;
+      h3{
+        font-size: 4.8vh;
+        color: $color2;
+      }
+      h4{
+        font-size: 3.3vh;
+      }
+      h5{
+        font-size: 3vh;
+      }
+    }
+    .part2{
+      width: 90%;
+      margin: auto;
+      text-align: center;
+      h3{
+        font-size: 4.4vh;
+        color: $color2;
+      }
+      h4{
+        font-size: 3vh;
+      }
+      h5{
+        font-size: 2.5vh;
+      }
+    } 
+  }
   i{ //correspond à la croix pour sortir des sections
     font-size: 5vh;
     position : absolute;

@@ -6,9 +6,10 @@ export default class Slide extends Component{
         return (
           <section className={ this.props.ClassName }>
             <h2>
-                {this.props.h2}
+                { this.props.h2 }
             </h2>
             <i className="far fa-times-circle" onClick={ this.props.onClick }></i>
+            { this.props.content }
           </section>
         );
       }

@@ -1,15 +1,36 @@
 h1 {
-  font-size: 9vh;
+  font-size: 10vh;
   margin-top: 18vh;
 }
 
 h2 {
-  font-size: 5vh;
+  font-size: 5.5vh;
   color: #DAC1A6;
   font-style: italic;
 }
 
+.flex-row-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
 .FirstPage {
+  text-align: center;
   background-color: #223342;
   color: white;
   height: 100vh;
@@ -26,20 +47,41 @@ h2 {
           align-items: center;
 }
 
-.FirstPage .button {
+.FirstPage .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
+  margin-top: 14vh;
+}
+
+.FirstPage .buttons:nth-child(2) {
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.FirstPage .buttons h6 {
+  font-size: 4vh;
+  margin: 0;
+}
+
+.FirstPage .buttons i {
+  margin-top: 2vh;
+  font-size: 5vh;
+}
+
+.FirstPage .buttons i:hover {
+  color: #DAC1A6;
 }
 
 section {

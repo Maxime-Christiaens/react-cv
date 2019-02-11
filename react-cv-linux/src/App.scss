@@ -5,16 +5,26 @@ $bgcolor2 : #223342;
 $color1 : #DAC1A6;
 
 h1{
-  font-size : 9vh;
+  font-size : 10vh;
   margin-top : 18vh;
 }
 h2{
-  font-size : 5vh;
+  font-size : 5.5vh;
   color: $color1;
   font-style : italic;
 }
 
+.flex-row-center{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.pointer {cursor: pointer;}
+
 .FirstPage {
+  text-align: center;
   background-color: $bgcolor2;
   color: white;
   height: 100vh;
@@ -22,11 +32,30 @@ h2{
   display: flex;
   flex-direction: column;
   align-items: center;
-  .button{
+  //Correspond au différents boutons permettant d'aller de la page d'acceuil à une autre section
+  .buttons{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    margin-top: 14vh;
+    &:nth-child(2){
+      $MLF: 5vw;
+      margin-left:$MLF;
+      margin-right:$MLF; 
+    }
+    h6{
+      font-size: 4vh;
+      margin: 0;
+    }
+    i{
+      margin-top : 2vh;
+      font-size: 5vh;
+      &:hover{
+        color: $color1;
+      }
+    }
   }
 }
 

@@ -80,8 +80,9 @@ export default class FirstPage extends Component {
                     <Button texte="Technologies" icone="far fa-arrow-alt-circle-down" onClick={ () => { this.FirstPageOpening(); this.up(); this.id(3) /*Cette methode me permet de récupérer un "id" me permettant par la suite d'activer le slide correspondant */ } }/>
                 </div>  
             </div>
+            <Formation></Formation>
             <Slide ClassName={ this.state.id=="1"?slideClass:"" /* La récupération de l'id me permet de choisir lequelle des slides doit être activer */} onClick={ () => { this.FirstPageClosing(); this.down()} } h2="Formations">
-                <Formation/>
+                <h2>hello</h2>
             </Slide>
             <Slide ClassName={ this.state.id=="2"?slideClass:"" } onClick={ () => { this.FirstPageClosing(); this.down() } } h2="hello billy2" />
             <Slide ClassName={ this.state.id=="3"?slideClass:"" } onClick={ () => { this.FirstPageClosing(); this.down() } } h2="hello billy3" />

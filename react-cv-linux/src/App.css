@@ -112,6 +112,7 @@ section i {
 
 section i:hover {
   color: #DAC1A6;
+  animation: rotate 4s alternate-reverse ease-in;
 }
 
 .opening {
@@ -215,20 +216,24 @@ section i:hover {
 }
 
 @-webkit-keyframes rotate {
-  0% {
-    -webkit-transform: rotate();
-            transform: rotate();
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
-  100% {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
 @keyframes rotate {
-  0% {
-    -webkit-transform: rotate();
-            transform: rotate();
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
-  100% {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 /*# sourceMappingURL=App.css.map */

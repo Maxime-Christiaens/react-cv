@@ -4,7 +4,10 @@ export default class Formation extends Component{
 
     render() {
         return (
-            <h3>Web Developer Junior</h3>
+            <div className="">
+                <h3>Web Developer Junior</h3>
+                <h5>Septembre - Avril 2019 / Becode.org / Charleroi</h5>
+            </div>
         );
       }
 }

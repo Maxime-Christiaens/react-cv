@@ -81,6 +81,7 @@ section{
     right: 4vw;
     &:hover{
       color: $color1;
+      animation: rotate 4s alternate-reverse ease-in;
     }
   }
 }
@@ -150,13 +151,9 @@ section{
   }
 }
 
-@keyframes rotate{
-  0%{
-    transform: rotate();
-  }
-  100%{
-    
-  }
+@keyframes rotate {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
 }
 
 

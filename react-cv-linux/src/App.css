@@ -103,6 +103,17 @@ section {
   top: 100%;
 }
 
+section i {
+  font-size: 5vh;
+  position: absolute;
+  top: 5vh;
+  right: 4vw;
+}
+
+section i:hover {
+  color: #DAC1A6;
+}
+
 .opening {
   -webkit-animation: opening 1s 0s ease-in forwards;
           animation: opening 1s 0s ease-in forwards;
@@ -200,6 +211,24 @@ section {
   }
   100% {
     top: 100%;
+  }
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate();
+            transform: rotate();
+  }
+  100% {
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate();
+            transform: rotate();
+  }
+  100% {
   }
 }
 /*# sourceMappingURL=App.css.map */

@@ -91,7 +91,7 @@ section{
     text-decoration: none;
     color: rgb(170, 165, 165);
   }
-  //
+  ////////
   .formation{
     h3{
       margin-top: 6vh;
@@ -142,7 +142,29 @@ section{
       }
     } 
   }
-  i{ //correspond à la croix pour sortir des sections
+  /////
+  .badges{
+    iframe{
+      width: 22vw; 
+      height: 20vh; 
+      margin-bottom: 2vh;
+      margin-left: 1vh;
+      margin-right: 1vh;
+      border: 0px none;
+      @media #{$responsive}{
+        width: 35vw; 
+        height: 23vh; 
+      }
+    }
+  .badgr{
+    a{
+      i{
+        font-size: 10vh;
+      }
+    }
+  }
+  }
+  .quit{ //correspond à la croix pour sortir des sections
     font-size: 5vh;
     position : absolute;
     top: 5vh;

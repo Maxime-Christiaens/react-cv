@@ -191,7 +191,27 @@ section .formation .part2 .part2-2 {
   width: 80%;
 }
 
-section i {
+section .badges iframe {
+  width: 22vw;
+  height: 20vh;
+  margin-bottom: 2vh;
+  margin-left: 1vh;
+  margin-right: 1vh;
+  border: 0px none;
+}
+
+@media screen and (min-width: 200px) and (max-width: 640px) {
+  section .badges iframe {
+    width: 35vw;
+    height: 23vh;
+  }
+}
+
+section .badges .badgr a i {
+  font-size: 10vh;
+}
+
+section .quit {
   font-size: 5vh;
   position: absolute;
   top: 5vh;
@@ -200,7 +220,7 @@ section i {
   transition: all 1s ease-in;
 }
 
-section i:hover {
+section .quit:hover {
   color: #DAC1A6;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);

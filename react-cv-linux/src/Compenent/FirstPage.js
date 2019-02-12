@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import Slide from './slides/slide';
 import Formation from './slides/formations';
+import Experience from './slides/experiences';
+import Badge from './slides/badges';
 import Button from './button';
 
 //création de l'objet H2
@@ -77,12 +79,12 @@ export default class FirstPage extends Component {
                 <div className="flex-row-center">
                     <Button texte="Formations" icone="far fa-arrow-alt-circle-down" onClick={ () => { this.FirstPageOpening(); this.up(); this.id(1) } }/>
                     <Button texte="Expériences" icone="far fa-arrow-alt-circle-down" onClick={ () => { this.FirstPageOpening(); this.up(); this.id(2) } }/> 
-                    <Button texte="Technologies" icone="far fa-arrow-alt-circle-down" onClick={ () => { this.FirstPageOpening(); this.up(); this.id(3) /*Cette methode me permet de récupérer un "id" me permettant par la suite d'activer le slide correspondant */ } }/>
+                    <Button texte="Badges" icone="far fa-arrow-alt-circle-down" onClick={ () => { this.FirstPageOpening(); this.up(); this.id(3) /*Cette methode me permet de récupérer un "id" me permettant par la suite d'activer le slide correspondant */ } }/>
                 </div>  
             </div>
             <Slide ClassName={ this.state.id=="1"?slideClass:"" /* La récupération de l'id me permet de choisir lequelle des slides doit être activer */} onClick={ () => { this.FirstPageClosing(); this.down()} } h2="Formations"  content={ <Formation/> } />
-            <Slide ClassName={ this.state.id=="2"?slideClass:"" } onClick={ () => { this.FirstPageClosing(); this.down() } } h2="hello billy2" />
-            <Slide ClassName={ this.state.id=="3"?slideClass:"" } onClick={ () => { this.FirstPageClosing(); this.down() } } h2="hello billy3" />
+            <Slide ClassName={ this.state.id=="2"?slideClass:"" } onClick={ () => { this.FirstPageClosing(); this.down() } } h2="Expériences" content={ <Experience/> } />
+            <Slide ClassName={ this.state.id=="3"?slideClass:"" } onClick={ () => { this.FirstPageClosing(); this.down() } } h2="Badges" content={ <Badge/> }/>
             </Fragment>
         );
     }

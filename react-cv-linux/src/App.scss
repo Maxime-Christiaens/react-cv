@@ -2,7 +2,7 @@
 $bgcolor1 : #283C4E;
 $bgcolor2 : #223342;
 $color1 : #DAC1A6;
-$color2 : #B89D8B;
+$color2 : rgb(197, 167, 147);
 //Variable media-query 
 $responsive : "screen and (min-width: 200px) and (max-width: 640px)";
 
@@ -121,7 +121,7 @@ section{
       }
     }
     .part2{
-      width: 90%;
+      width: 100%;
       margin: auto;
       text-align: center;
       h3{
@@ -134,6 +134,12 @@ section{
       h5{
         font-size: 2.5vh;
       }
+      .part2-1{
+        width: 80%;
+      }
+      .part2-2{
+        width: 80%;
+      }
     } 
   }
   i{ //correspond à la croix pour sortir des sections
@@ -141,9 +147,10 @@ section{
     position : absolute;
     top: 5vh;
     right: 4vw;
+    transition: all 1s ease-in;
     &:hover{
       color: $color1;
-      animation: rotate 4s alternate-reverse ease-in;
+      transform: rotate(360deg);
     }
   }
 }

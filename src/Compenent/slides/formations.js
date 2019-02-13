@@ -13,7 +13,7 @@ export default class Formation extends Component {
                 <div className="flex-row-center part2">
                     <div className="flex-column-center part2-1">
                         <h3>Big Data Consultant</h3>
-                        <h4>Décembre 2017, <a rel="noopener noreferrer" target="_blank" href="http://www.technofuturtic.be/">technofuturTIC</a> à Charleroi</h4>
+                        <h4>Décembre 2017, <a rel="noopener noreferrer" target="_blank" href="http://www.technofuturtic.be/">TechnofuturTIC</a> à Charleroi</h4>
                         <h5>Initiation à des méthodes d'analyse de données </h5>
                     </div>
                     <div className="flex-column-center part2-2">

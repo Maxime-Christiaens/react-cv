@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import Slide from './slides/slide';
 import Formation from './slides/formations';
 import Experience from './slides/experiences';
-import Badge from './slides/badges';
 import Button from './button';
 import Technologie from './slides/Technologies';
 

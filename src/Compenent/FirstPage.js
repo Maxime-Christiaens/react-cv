@@ -1,7 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import Slide from './slides/slide';
 import Formation from './slides/formations';
+import Experience from './slides/experiences';
+import Badge from './slides/badges';
 import Button from './button';
+import Technologie from './slides/Technologies';
 
 //création de l'objet H2
 export default class FirstPage extends Component {
@@ -81,8 +84,8 @@ export default class FirstPage extends Component {
                 </div>  
             </div>
             <Slide ClassName={ this.state.id=="1"?slideClass:"" /* La récupération de l'id me permet de choisir lequelle des slides doit être activer */} onClick={ () => { this.FirstPageClosing(); this.down()} } h2="Formations"  content={ <Formation/> } />
-            <Slide ClassName={ this.state.id=="2"?slideClass:"" } onClick={ () => { this.FirstPageClosing(); this.down() } } h2="hello billy2" />
-            <Slide ClassName={ this.state.id=="3"?slideClass:"" } onClick={ () => { this.FirstPageClosing(); this.down() } } h2="hello billy3" />
+            <Slide ClassName={ this.state.id=="2"?slideClass:"" } onClick={ () => { this.FirstPageClosing(); this.down() } } h2="Expériences" content={ <Experience/> } />
+            <Slide ClassName={ this.state.id=="3"?slideClass:"" } onClick={ () => { this.FirstPageClosing(); this.down() } } h2="Technologies" content={ <Technologie/> }/>
             </Fragment>
         );
     }

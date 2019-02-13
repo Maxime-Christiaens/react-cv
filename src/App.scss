@@ -2,38 +2,55 @@
 $bgcolor1 : #283C4E;
 $bgcolor2 : #223342;
 $color1 : #DAC1A6;
-$color2 : #B89D8B;
+$color2 : rgb(197, 167, 147);
 //Variable media-query 
 $responsive : "screen and (min-width: 200px) and (max-width: 640px)";
 
-h1{
-  font-size : 10vh;
-  margin-top : 18vh;
-  @media #{$responsive}{
-    
-  }
-}
-h2{
-  font-size : 5.5vh;
-  color: $color1;
-  font-style : italic;
-}
-
-.flex-row-center{
+//Mixin 
+@mixin flex-row() {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.flex-column-center{
+@mixin flex-column() {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.pointer {cursor: pointer;}
+h1 {
+  font-size: 10vh;
+  margin-top: 18vh;
+
+  @media #{$responsive} {}
+}
+
+h2 {
+  font-size: 5.5vh;
+  color: $color1;
+  font-style: italic;
+}
+
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pointer {
+  cursor: pointer;
+}
 
 .FirstPage {
   text-align: center;
@@ -44,34 +61,39 @@ h2{
   display: flex;
   flex-direction: column;
   align-items: center;
+
   //Correspond au différents boutons permettant d'aller de la page d'acceuil à une autre section
-  .buttons{
+  .buttons {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin-top: 14vh;
-    &:nth-child(2){
+
+    &:nth-child(2) {
       $MLF: 5vw;
-      margin-left:$MLF;
-      margin-right:$MLF; 
+      margin-left: $MLF;
+      margin-right: $MLF;
     }
-    h6{
+
+    h6 {
       font-size: 4vh;
       margin: 0;
     }
-    i{
-      margin-top : 2vh;
+
+    i {
+      margin-top: 2vh;
       font-size: 5vh;
-      &:hover{
+
+      &:hover {
         color: $color2;
       }
     }
   }
 }
 
-section{
+section {
   //animation: up 1s ease-in-out 1s;
   background-color: $bgcolor1;
   color: white;
@@ -82,77 +104,198 @@ section{
   align-items: center;
   position: absolute;
   top: 100%;
-  h2{
-    margin-top: 10vh!important;
+
+  h2 {
+    margin-top: 10vh !important;
     color: white;
-    text-transform: uppercase!important;
+    text-transform: uppercase !important;
   }
-  a{
+
+  a {
     text-decoration: none;
     color: rgb(170, 165, 165);
   }
-  //
-  .formation{
-    h3{
+
+  ////////
+  .formation {
+    h3 {
       margin-top: 6vh;
       margin-bottom: 4vh;
     }
-    h4{
+
+    h4 {
       margin-top: 0;
       margin-bottom: 0;
     }
-    h5{
+
+    h5 {
       margin-top: 3vh;
       margin-bottom: 3vh;
     }
-    .part1{
+
+    .part1 {
       width: 60%;
       margin: auto;
       text-align: center;
-      h3{
+
+      h3 {
         font-size: 4.8vh;
         color: $color2;
       }
-      h4{
+
+      h4 {
         font-size: 3.3vh;
       }
-      h5{
+
+      h5 {
         font-size: 3vh;
       }
     }
-    .part2{
+
+    .part2 {
       width: 100%;
       margin: auto;
       text-align: center;
-      h3{
+
+      h3 {
         font-size: 4.4vh;
         color: $color2;
       }
-      h4{
+
+      h4 {
         font-size: 3vh;
       }
-      h5{
+
+      h5 {
         font-size: 2.5vh;
       }
-      .part2-1{
+
+      .part2-1 {
         width: 80%;
       }
-      .part2-2{
+
+      .part2-2 {
         width: 80%;
       }
-    } 
-  }
-  i{ //correspond à la croix pour sortir des sections
-    font-size: 5vh;
-    position : absolute;
-    top: 5vh;
-    right: 4vw;
-    &:hover{
-      color: $color1;
-      animation: rotate 4s alternate-reverse ease-in;
     }
   }
+
+  ///expérience 
+  .experience {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    margin-top: 2vh;
+
+    div {
+      margin-bottom: 7vh;
+
+      h3 {
+        font-size: 4.8vh;
+        margin-top: 0;
+        margin-bottom: 0;
+        color: $color2;
+      }
+
+      h4 {
+        font-size: 3.3vh;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+      }
+
+      h5 {
+        font-size: 3vh;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        &:last-child(2) {
+          margin-bottom: 15vh;
+        }
+      }
+    }
+
+  }
+
+  //techno slide
+  .technologies .row {
+    @include flex-row();
+    div {
+      @include flex-column();
+      padding-left: 3vh;
+      padding-right: 3vh;
+      .techno {
+        a {
+          color: white;
+
+          &:hover p {
+            transition: all 0.5s;
+            transform: translateY(0vh);
+            opacity: 1;
+          }
+
+          p {
+            font-size: 2.5vh;
+            transition: all 0.5s;
+            transform: translateY(-3vh);
+            opacity: 0;
+          }
+          i {
+            font-size: 16vh;
+          }
+        }
+      }
+    }
+  }
+
+
 }
+
+/*
+  ///slide badge
+  .badges {
+    iframe {
+      width: 22vw;
+      height: 21vh;
+      margin-bottom: 2vh;
+      margin-left: 1vh;
+      margin-right: 1vh;
+      border: 0px none;
+
+      @media #{$responsive} {
+        width: 35vw;
+        height: 23vh;
+      }
+    }
+    .badgr {
+      a {
+        color: white;
+        i {
+          font-size: 20vh;
+        }
+        p{
+          font-size: 2.5vh;
+        }
+      }
+    }
+  }
+*/
+
+
+
+.quit {
+  //correspond à la croix pour sortir des sections
+  font-size: 5vh;
+  position: absolute;
+  top: 5vh;
+  right: 4vw;
+  transition: all 1s ease-in;
+
+  &:hover {
+    color: $color1;
+    transform: rotate(360deg);
+  }
+}
+
 
 /////////////
 //Animation//
@@ -161,11 +304,12 @@ section{
 ////////////////////
 //Pour la first-page
 
-.opening{
+.opening {
   //forwards = reste à l'état final de l'animation après l'avoir exécuter
   animation: opening 1s 0s ease-in forwards;
 }
-.closing{
+
+.closing {
   //alternate-reverse = permet de faire l'animation inverse
   animation: closing 1s 0s ease-in forwards;
 }
@@ -175,6 +319,7 @@ section{
     transform: perspective(100vh) rotateX(0deg);
     //transform: rotate(0deg);
   }
+
   100% {
     transform: perspective(100vh) rotateX(-30deg);
     //transform: rotate(360deg);
@@ -185,6 +330,7 @@ section{
   0% {
     transform: perspective(100vh) rotateX(-30deg);
   }
+
   100% {
     transform: perspective(100vh) rotateX(0deg);
   }
@@ -193,11 +339,11 @@ section{
 /////////////////
 //pour les slides
 
-.up{
+.up {
   animation: up 0.5s 0.5s ease-in-out forwards;
 }
 
-.down{
+.down {
   animation: down 0.5s 0s ease-out forwards;
 }
 
@@ -205,6 +351,7 @@ section{
   0% {
     top: 100%;
   }
+
   100% {
     top: 0%;
   }
@@ -214,14 +361,18 @@ section{
   0% {
     top: 0%;
   }
+
   100% {
     top: 100%;
   }
 }
 
 @keyframes rotate {
-	from { transform: rotate(0deg); }
-	to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
-
-

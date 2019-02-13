@@ -97,7 +97,7 @@ h2 {
 }
 
 .FirstPage .buttons i:hover {
-  color: #B89D8B;
+  color: #c5a793;
 }
 
 section {
@@ -153,7 +153,7 @@ section .formation .part1 {
 
 section .formation .part1 h3 {
   font-size: 4.8vh;
-  color: #B89D8B;
+  color: #c5a793;
 }
 
 section .formation .part1 h4 {
@@ -172,7 +172,7 @@ section .formation .part2 {
 
 section .formation .part2 h3 {
   font-size: 4.4vh;
-  color: #B89D8B;
+  color: #c5a793;
 }
 
 section .formation .part2 h4 {
@@ -191,16 +191,141 @@ section .formation .part2 .part2-2 {
   width: 80%;
 }
 
-section i {
+section .experience {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  margin-top: 2vh;
+}
+
+section .experience div {
+  margin-bottom: 7vh;
+}
+
+section .experience div h3 {
+  font-size: 4.8vh;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #c5a793;
+}
+
+section .experience div h4 {
+  font-size: 3.3vh;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+section .experience div h5 {
+  font-size: 3vh;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+section .experience div h5:last-child(2) {
+  margin-bottom: 15vh;
+}
+
+section .technologies .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .technologies .row div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 3vh;
+  padding-right: 3vh;
+}
+
+section .technologies .row div .techno a {
+  color: white;
+}
+
+section .technologies .row div .techno a:hover p {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: translateY(0vh);
+          transform: translateY(0vh);
+  opacity: 1;
+}
+
+section .technologies .row div .techno a p {
+  font-size: 2.5vh;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: translateY(-3vh);
+          transform: translateY(-3vh);
+  opacity: 0;
+}
+
+section .technologies .row div .techno a i {
+  font-size: 16vh;
+}
+
+/*
+  ///slide badge
+  .badges {
+    iframe {
+      width: 22vw;
+      height: 21vh;
+      margin-bottom: 2vh;
+      margin-left: 1vh;
+      margin-right: 1vh;
+      border: 0px none;
+
+      @media screen and (min-width: 200px) and (max-width: 640px) {
+        width: 35vw;
+        height: 23vh;
+      }
+    }
+    .badgr {
+      a {
+        color: white;
+        i {
+          font-size: 20vh;
+        }
+        p{
+          font-size: 2.5vh;
+        }
+      }
+    }
+  }
+*/
+.quit {
   font-size: 5vh;
   position: absolute;
   top: 5vh;
   right: 4vw;
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
 }
 
-section i:hover {
+.quit:hover {
   color: #DAC1A6;
-  animation: rotate 4s alternate-reverse ease-in;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 .opening {

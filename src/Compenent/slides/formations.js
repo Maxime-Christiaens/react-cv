@@ -7,7 +7,7 @@ export default class Formation extends Component {
             <div className="formation">
                 <div className="part1">
                     <h3>Web Developer Junior</h3>
-                    <h4>Septembre 2018 - Mars 2019, <a href="https://becode.org/index_fr.html" rel="noopener noreferrer" target="_blank" class="black-text darken-3">Becode.org</a> à Charleroi</h4>
+                    <h4>Septembre 2018 - Mars 2019, <a href="https://becode.org/index_fr.html" rel="noopener noreferrer" target="_blank">Becode.org</a> à Charleroi</h4>
                     <h5>Formation centrée sur les technologies du web : Html, Css, JavaScript, PHP, Wordpress, Mysql & Frameworks : Bootstrap, ReactJS </h5>
                 </div>
                 <div className="flex-row-center part2">

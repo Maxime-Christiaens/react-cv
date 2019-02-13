@@ -3,10 +3,26 @@ h1 {
   margin-top: 18vh;
 }
 
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  h1 {
+    font-size: 8vh;
+    margin-top: 10vh;
+    margin-bottom: 0vh;
+  }
+}
+
 h2 {
   font-size: 5.5vh;
   color: #DAC1A6;
   font-style: italic;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  h2 {
+    font-size: 4vh;
+    margin-top: 10vh;
+    margin-bottom: 3vh;
+  }
 }
 
 .flex-row-center {
@@ -63,7 +79,41 @@ h2 {
           align-items: center;
 }
 
-.FirstPage .buttons {
+.FirstPage .divButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  .FirstPage .divButton {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.FirstPage .divButton .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,30 +133,49 @@ h2 {
   transition: all 0.35s;
 }
 
-.FirstPage .buttons:hover h6 {
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  .FirstPage .divButton .buttons {
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+  }
+}
+
+.FirstPage .divButton .buttons:hover h6 {
   color: #DAC1A6;
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
 }
 
-.FirstPage .buttons:nth-child(2) {
+.FirstPage .divButton .buttons:nth-child(2) {
   margin-left: 5vw;
   margin-right: 5vw;
 }
 
-.FirstPage .buttons h6 {
+.FirstPage .divButton .buttons h6 {
   font-size: 4vh;
   margin: 0;
 }
 
-.FirstPage .buttons i {
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  .FirstPage .divButton .buttons h6 {
+    font-size: 3.8vh;
+  }
+}
+
+.FirstPage .divButton .buttons i {
   margin-top: 2vh;
   font-size: 5vh;
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
 }
 
-.FirstPage .buttons i:hover {
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  .FirstPage .divButton .buttons i {
+    font-size: 4vh;
+  }
+}
+
+.FirstPage .divButton .buttons i:hover {
   color: #c5a793;
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
@@ -137,6 +206,12 @@ section h2 {
   text-transform: uppercase !important;
 }
 
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section h2 {
+    margin-top: 5vh !important;
+  }
+}
+
 section a {
   text-decoration: none;
   color: #aaa5a5;
@@ -153,6 +228,13 @@ section .formation h3 {
   margin-bottom: 4vh;
 }
 
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .formation h3 {
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+  }
+}
+
 section .formation h4 {
   margin-top: 0;
   margin-bottom: 0;
@@ -161,6 +243,13 @@ section .formation h4 {
 section .formation h5 {
   margin-top: 3vh;
   margin-bottom: 3vh;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .formation h5 {
+    margin-top: 1.2vh;
+    margin-bottom: 1.2vh;
+  }
 }
 
 section .formation .part1 {
@@ -174,12 +263,30 @@ section .formation .part1 h3 {
   color: #c5a793;
 }
 
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .formation .part1 h3 {
+    font-size: 3.3vh;
+  }
+}
+
 section .formation .part1 h4 {
   font-size: 3.3vh;
 }
 
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .formation .part1 h4 {
+    font-size: 2.6vh;
+  }
+}
+
 section .formation .part1 h5 {
   font-size: 3vh;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .formation .part1 h5 {
+    font-size: 2vh;
+  }
 }
 
 section .formation .part2 {
@@ -193,20 +300,50 @@ section .formation .part2 h3 {
   color: #c5a793;
 }
 
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .formation .part2 h3 {
+    font-size: 3vh;
+  }
+}
+
 section .formation .part2 h4 {
   font-size: 3vh;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .formation .part2 h4 {
+    font-size: 2.4vh;
+  }
 }
 
 section .formation .part2 h5 {
   font-size: 2.5vh;
 }
 
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .formation .part2 h5 {
+    font-size: 2vh;
+  }
+}
+
 section .formation .part2 .part2-1 {
   width: 80%;
 }
 
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .formation .part2 .part2-1 {
+    width: 50%;
+  }
+}
+
 section .formation .part2 .part2-2 {
   width: 80%;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .formation .part2 .part2-2 {
+    width: 50%;
+  }
 }
 
 section .experience {
@@ -227,16 +364,36 @@ section .experience div h3 {
   color: #c5a793;
 }
 
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .experience div h3 {
+    font-size: 3.6vh;
+  }
+}
+
 section .experience div h4 {
   font-size: 3.3vh;
   margin-top: 3vh;
   margin-bottom: 3vh;
 }
 
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .experience div h4 {
+    font-size: 2.5vh;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+  }
+}
+
 section .experience div h5 {
   font-size: 3vh;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .experience div h5 {
+    font-size: 2.5vh;
+  }
 }
 
 section .experience div h5:last-child(2) {
@@ -275,6 +432,14 @@ section .technologies div {
           align-items: center;
   padding-left: 3vh;
   padding-right: 3vh;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .technologies div {
+    padding-top: 2vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+  }
 }
 
 section .technologies div .techno a {
@@ -322,7 +487,7 @@ section .technologies div .techno a i:hover {
       margin-right: 1vh;
       border: 0px none;
 
-      @media screen and (min-width: 200px) and (max-width: 640px) {
+      @media screen and (min-width: 100px) and (max-width: 768px) {
         width: 35vw;
         height: 23vh;
       }

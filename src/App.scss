@@ -4,7 +4,7 @@ $bgcolor2 : #223342;
 $color1 : #DAC1A6;
 $color2 : rgb(197, 167, 147);
 //Variable media-query 
-$responsive : "screen and (min-width: 200px) and (max-width: 640px)";
+$responsive : "screen and (min-width: 100px) and (max-width: 768px)";
 
 //Mixin 
 @mixin flex-row() {
@@ -25,13 +25,23 @@ h1 {
   font-size: 10vh;
   margin-top: 18vh;
 
-  @media #{$responsive} {}
+  @media #{$responsive} {
+    font-size: 8vh;
+    margin-top: 10vh;
+    margin-bottom: 0vh;
+  }
 }
 
 h2 {
   font-size: 5.5vh;
   color: $color1;
   font-style: italic;
+
+  @media #{$responsive} {
+    font-size: 4vh;
+    margin-top: 10vh;
+    margin-bottom: 3vh;
+  }
 }
 
 .flex-row-center {
@@ -62,43 +72,61 @@ h2 {
   flex-direction: column;
   align-items: center;
 
-  //Correspond au différents boutons permettant d'aller de la page d'acceuil à une autre section
-  .buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 14vh;
-    transition: all 0.35s;
-    &:hover h6{
-      color: $color1;
+  .divButton {
+    @include flex-row();
+    @media #{$responsive} {
+      @include flex-column();
+    }
+    //Correspond au différents boutons permettant d'aller de la page d'acceuil à une autre section
+    .buttons {
+      @media #{$responsive} {
+        margin-top:2vh;
+        margin-bottom:1vh;
+      }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-top: 14vh;
       transition: all 0.35s;
-    }
 
-    &:nth-child(2) {
-      $MLF: 5vw;
-      margin-left: $MLF;
-      margin-right: $MLF;
-    }
-
-    h6 {
-      font-size: 4vh;
-      margin: 0;
-      
-    }
-
-    i {
-      margin-top: 2vh;
-      font-size: 5vh;
-      transition: all 0.35s;
-      &:hover {  
-        color: $color2;
+      &:hover h6 {
+        color: $color1;
         transition: all 0.35s;
+      }
+
+      &:nth-child(2) {
+        $MLF: 5vw;
+        margin-left: $MLF;
+        margin-right: $MLF;
+      }
+
+      h6 {
+        font-size: 4vh;
+        margin: 0;
+        @media #{$responsive} {
+          font-size: 3.8vh;
+        }
+      }
+
+      i {
+        margin-top: 2vh;
+        font-size: 5vh;
+        transition: all 0.35s;
+        @media #{$responsive} {
+          font-size: 4vh;
+        }
+
+        &:hover {
+          color: $color2;
+          transition: all 0.35s;
+        }
       }
     }
   }
 }
+
 ////////////////////
 //Style des slides//
 ////////////////////
@@ -118,23 +146,31 @@ section {
     margin-top: 10vh !important;
     color: white;
     text-transform: uppercase !important;
+    @media #{$responsive} {
+      margin-top: 5vh !important;
+    }
   }
 
   a {
     text-decoration: none;
     color: rgb(170, 165, 165);
-    &:hover{
+
+    &:hover {
       color: rgb(7, 6, 6);
       transition: all 0.29s;
     }
   }
 
-///////////
-//Formation
+  ///////////
+  //Formation
   .formation {
     h3 {
       margin-top: 6vh;
       margin-bottom: 4vh;
+      @media #{$responsive} {
+        margin-top: 2vh;
+        margin-bottom: 1vh;
+      }
     }
 
     h4 {
@@ -145,6 +181,10 @@ section {
     h5 {
       margin-top: 3vh;
       margin-bottom: 3vh;
+      @media #{$responsive} {
+        margin-top: 1.2vh;
+        margin-bottom: 1.2vh;
+      }
     }
 
     .part1 {
@@ -155,14 +195,23 @@ section {
       h3 {
         font-size: 4.8vh;
         color: $color2;
+        @media #{$responsive} {
+          font-size: 3.3vh;
+        }
       }
 
       h4 {
         font-size: 3.3vh;
+        @media #{$responsive} {
+          font-size: 2.6vh;
+        }
       }
 
       h5 {
         font-size: 3vh;
+        @media #{$responsive} {
+          font-size: 2vh;
+        }
       }
     }
 
@@ -174,27 +223,43 @@ section {
       h3 {
         font-size: 4.4vh;
         color: $color2;
+        @media #{$responsive} {
+          font-size: 3vh;
+        }
       }
 
       h4 {
         font-size: 3vh;
+        @media #{$responsive} {
+          font-size: 2.4vh;
+        }
       }
 
       h5 {
         font-size: 2.5vh;
+        @media #{$responsive} {
+          font-size: 2vh;
+        }
       }
 
       .part2-1 {
         width: 80%;
+        @media #{$responsive} {
+          width: 50%;
+        }
       }
 
       .part2-2 {
         width: 80%;
+        @media #{$responsive} {
+          width: 50%;
+        }
       }
     }
   }
-/////////////
-//Expériences
+
+  /////////////
+  //Expériences
   .experience {
     width: 70%;
     margin: auto;
@@ -209,18 +274,29 @@ section {
         margin-top: 0;
         margin-bottom: 0;
         color: $color2;
+        @media #{$responsive} {
+          font-size: 3.6vh;
+        }
       }
 
       h4 {
         font-size: 3.3vh;
         margin-top: 3vh;
         margin-bottom: 3vh;
+        @media #{$responsive} {
+          font-size: 2.5vh;
+          margin-top: 1.5vh;
+          margin-bottom: 1.5vh;
+        }
       }
 
       h5 {
         font-size: 3vh;
         margin-top: 0;
         margin-bottom: 0;
+        @media #{$responsive} {
+          font-size: 2.5vh;
+        }
 
         &:last-child(2) {
           margin-bottom: 15vh;
@@ -229,14 +305,22 @@ section {
     }
 
   }
-/////////////////
-//technologies
+
+  /////////////////
+  //technologies
   .technologies {
     @include flex-row();
+
     div {
       @include flex-column();
       padding-left: 3vh;
       padding-right: 3vh;
+      @media #{$responsive} {
+        padding-top: 2vh;
+        padding-left: 2vh;
+        padding-right: 2vh;
+      }
+
       .techno {
         a {
           color: white;
@@ -253,10 +337,12 @@ section {
             transform: translateY(-3vh);
             opacity: 0;
           }
+
           i {
             font-size: 16vh;
             transition: all 0.3s;
-            &:hover{
+
+            &:hover {
               color: $color1;
               transition: all 0.3s;
             }

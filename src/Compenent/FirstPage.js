@@ -77,7 +77,7 @@ export default class FirstPage extends Component {
                     { this.props.h2 /*Mise en place d'un props qui h2 qui contiendra ce qu'on désire */ }
                 </h2>
                 { /*Buttons permettant de changer de page */}
-                <div className="flex-row-center">
+                <div className="divButton">
                     <Button texte="Formations" icone="far fa-arrow-alt-circle-down" onClick={ () => { this.FirstPageOpening(); this.up(); this.id(1) } }/>
                     <Button texte="Expériences" icone="far fa-arrow-alt-circle-down" onClick={ () => { this.FirstPageOpening(); this.up(); this.id(2) } }/> 
                     <Button texte="Technologies" icone="far fa-arrow-alt-circle-down" onClick={ () => { this.FirstPageOpening(); this.up(); this.id(3) /*Cette methode me permet de récupérer un "id" me permettant par la suite d'activer le slide correspondant */ } }/>

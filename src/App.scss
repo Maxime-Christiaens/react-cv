@@ -70,6 +70,11 @@ h2 {
     align-items: center;
     text-align: center;
     margin-top: 14vh;
+    transition: all 0.35s;
+    &:hover h6{
+      color: $color1;
+      transition: all 0.35s;
+    }
 
     &:nth-child(2) {
       $MLF: 5vw;
@@ -80,19 +85,23 @@ h2 {
     h6 {
       font-size: 4vh;
       margin: 0;
+      
     }
 
     i {
       margin-top: 2vh;
       font-size: 5vh;
-
-      &:hover {
+      transition: all 0.35s;
+      &:hover {  
         color: $color2;
+        transition: all 0.35s;
       }
     }
   }
 }
-
+////////////////////
+//Style des slides//
+////////////////////
 section {
   //animation: up 1s ease-in-out 1s;
   background-color: $bgcolor1;
@@ -114,9 +123,14 @@ section {
   a {
     text-decoration: none;
     color: rgb(170, 165, 165);
+    &:hover{
+      color: rgb(7, 6, 6);
+      transition: all 0.29s;
+    }
   }
 
-  ////////
+///////////
+//Formation
   .formation {
     h3 {
       margin-top: 6vh;
@@ -179,8 +193,8 @@ section {
       }
     }
   }
-
-  ///expérience 
+/////////////
+//Expériences
   .experience {
     width: 70%;
     margin: auto;
@@ -215,9 +229,9 @@ section {
     }
 
   }
-
-  //techno slide
-  .technologies .row {
+/////////////////
+//technologies
+  .technologies {
     @include flex-row();
     div {
       @include flex-column();
@@ -241,6 +255,11 @@ section {
           }
           i {
             font-size: 16vh;
+            transition: all 0.3s;
+            &:hover{
+              color: $color1;
+              transition: all 0.3s;
+            }
           }
         }
       }
@@ -251,7 +270,8 @@ section {
 }
 
 /*
-  ///slide badge
+/////////////
+//slide badge
   .badges {
     iframe {
       width: 22vw;
@@ -280,8 +300,6 @@ section {
   }
 */
 
-
-
 .quit {
   //correspond à la croix pour sortir des sections
   font-size: 5vh;
@@ -295,7 +313,6 @@ section {
     transform: rotate(360deg);
   }
 }
-
 
 /////////////
 //Animation//

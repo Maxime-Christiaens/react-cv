@@ -79,6 +79,14 @@ h2 {
           align-items: center;
   text-align: center;
   margin-top: 14vh;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.FirstPage .buttons:hover h6 {
+  color: #DAC1A6;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
 }
 
 .FirstPage .buttons:nth-child(2) {
@@ -94,10 +102,14 @@ h2 {
 .FirstPage .buttons i {
   margin-top: 2vh;
   font-size: 5vh;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
 }
 
 .FirstPage .buttons i:hover {
   color: #c5a793;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
 }
 
 section {
@@ -128,6 +140,12 @@ section h2 {
 section a {
   text-decoration: none;
   color: #aaa5a5;
+}
+
+section a:hover {
+  color: #070606;
+  -webkit-transition: all 0.29s;
+  transition: all 0.29s;
 }
 
 section .formation h3 {
@@ -225,7 +243,7 @@ section .experience div h5:last-child(2) {
   margin-bottom: 15vh;
 }
 
-section .technologies .row {
+section .technologies {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -241,7 +259,7 @@ section .technologies .row {
           align-items: center;
 }
 
-section .technologies .row div {
+section .technologies div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -259,11 +277,11 @@ section .technologies .row div {
   padding-right: 3vh;
 }
 
-section .technologies .row div .techno a {
+section .technologies div .techno a {
   color: white;
 }
 
-section .technologies .row div .techno a:hover p {
+section .technologies div .techno a:hover p {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   -webkit-transform: translateY(0vh);
@@ -271,7 +289,7 @@ section .technologies .row div .techno a:hover p {
   opacity: 1;
 }
 
-section .technologies .row div .techno a p {
+section .technologies div .techno a p {
   font-size: 2.5vh;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -280,12 +298,21 @@ section .technologies .row div .techno a p {
   opacity: 0;
 }
 
-section .technologies .row div .techno a i {
+section .technologies div .techno a i {
   font-size: 16vh;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+section .technologies div .techno a i:hover {
+  color: #DAC1A6;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 /*
-  ///slide badge
+/////////////
+//slide badge
   .badges {
     iframe {
       width: 22vw;

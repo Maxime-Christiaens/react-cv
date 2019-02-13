@@ -1,11 +1,10 @@
 import React, { Component, Fragment } from 'react';
-import Badgr from './smallObject/badgr';
 
 export default class Badge extends Component {
 
     render() {
         return (
-            /*
+            
             <div className="badges">
                 <div>
                     <iframe src="https://api.badgr.io/public/assertions/1nhvHBZNRFCnp6UjB7wD_g?embedVersion=1" title="Badge: HTML 5"></iframe>
@@ -20,10 +19,7 @@ export default class Badge extends Component {
                 <iframe src="https://api.badgr.io/public/assertions/MC-tG3ORSj-O_eW6hAsiTQ?embedVersion=1" title="Badge: Terminal user"></iframe>
                 </div>
             </div>
-            */
-            <Fragment>
-                <Badgr/>
-            </Fragment>
+            
         );
     }
 }

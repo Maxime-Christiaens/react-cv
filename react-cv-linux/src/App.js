@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import FirstPage from './Compenent/FirstPage';
-import './App.css';
+import './styles/App.css';
 
 
 export default class App extends Component {

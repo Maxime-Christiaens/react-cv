@@ -1,0 +1,481 @@
+//Variables couleurs 
+$bgcolor1 : #283C4E;
+$bgcolor2 : #223342;
+$color1 : #DAC1A6;
+$color2 : rgb(197, 167, 147);
+//Variable media-query 
+$responsive : "screen and (min-width: 100px) and (max-width: 768px)";
+
+//Mixin 
+@mixin flex-row() {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 10vh;
+  margin-top: 18vh;
+
+  @media #{$responsive} {
+    font-size: 8vh;
+    margin-top: 10vh;
+    margin-bottom: 0vh;
+  }
+}
+
+h2 {
+  font-size: 5.5vh;
+  color: $color1;
+  font-style: italic;
+
+  @media #{$responsive} {
+    font-size: 4vh;
+    margin-top: 10vh;
+    margin-bottom: 3vh;
+  }
+}
+
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.FirstPage {
+  text-align: center;
+  background-color: $bgcolor2;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .divButton {
+    @include flex-row();
+    @media #{$responsive} {
+      @include flex-column();
+    }
+    //Correspond au différents boutons permettant d'aller de la page d'acceuil à une autre section
+    .buttons {
+      @media #{$responsive} {
+        margin-top:2vh;
+        margin-bottom:1vh;
+      }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-top: 14vh;
+      transition: all 0.35s;
+
+      &:hover h6 {
+        color: $color1;
+        transition: all 0.35s;
+      }
+
+      &:nth-child(2) {
+        $MLF: 5vw;
+        margin-left: $MLF;
+        margin-right: $MLF;
+      }
+
+      h6 {
+        font-size: 4vh;
+        margin: 0;
+        @media #{$responsive} {
+          font-size: 3.8vh;
+        }
+      }
+
+      i {
+        margin-top: 2vh;
+        font-size: 5vh;
+        transition: all 0.35s;
+        @media #{$responsive} {
+          font-size: 4vh;
+        }
+
+        &:hover {
+          color: $color2;
+          transition: all 0.35s;
+        }
+      }
+    }
+  }
+}
+
+////////////////////
+//Style des slides//
+////////////////////
+section {
+  //animation: up 1s ease-in-out 1s;
+  background-color: $bgcolor1;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+
+  h2 {
+    margin-top: 10vh !important;
+    color: white;
+    text-transform: uppercase !important;
+    @media #{$responsive} {
+      margin-top: 5vh !important;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(170, 165, 165);
+
+    &:hover {
+      color: rgb(7, 6, 6);
+      transition: all 0.29s;
+    }
+  }
+
+  ///////////
+  //Formation
+  .formation {
+    h3 {
+      margin-top: 6vh;
+      margin-bottom: 4vh;
+      @media #{$responsive} {
+        margin-top: 2vh;
+        margin-bottom: 1vh;
+      }
+    }
+
+    h4 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    h5 {
+      margin-top: 3vh;
+      margin-bottom: 3vh;
+      @media #{$responsive} {
+        margin-top: 1.2vh;
+        margin-bottom: 1.2vh;
+      }
+    }
+
+    .part1 {
+      width: 60%;
+      margin: auto;
+      text-align: center;
+
+      h3 {
+        font-size: 4.8vh;
+        color: $color2;
+        @media #{$responsive} {
+          font-size: 3.3vh;
+        }
+      }
+
+      h4 {
+        font-size: 3.3vh;
+        @media #{$responsive} {
+          font-size: 2.6vh;
+        }
+      }
+
+      h5 {
+        font-size: 3vh;
+        @media #{$responsive} {
+          font-size: 2vh;
+        }
+      }
+    }
+
+    .part2 {
+      width: 100%;
+      margin: auto;
+      text-align: center;
+
+      h3 {
+        font-size: 4.4vh;
+        color: $color2;
+        @media #{$responsive} {
+          font-size: 3vh;
+        }
+      }
+
+      h4 {
+        font-size: 3vh;
+        @media #{$responsive} {
+          font-size: 2.4vh;
+        }
+      }
+
+      h5 {
+        font-size: 2.5vh;
+        @media #{$responsive} {
+          font-size: 2vh;
+        }
+      }
+
+      .part2-1 {
+        width: 80%;
+        @media #{$responsive} {
+          width: 50%;
+        }
+      }
+
+      .part2-2 {
+        width: 80%;
+        @media #{$responsive} {
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  /////////////
+  //Expériences
+  .experience {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    margin-top: 2vh;
+
+    div {
+      margin-bottom: 7vh;
+
+      h3 {
+        font-size: 4.8vh;
+        margin-top: 0;
+        margin-bottom: 0;
+        color: $color2;
+        @media #{$responsive} {
+          font-size: 3.6vh;
+        }
+      }
+
+      h4 {
+        font-size: 3.3vh;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+        @media #{$responsive} {
+          font-size: 2.5vh;
+          margin-top: 1.5vh;
+          margin-bottom: 1.5vh;
+        }
+      }
+
+      h5 {
+        font-size: 3vh;
+        margin-top: 0;
+        margin-bottom: 0;
+        @media #{$responsive} {
+          font-size: 2.5vh;
+        }
+
+        &:last-child(2) {
+          margin-bottom: 15vh;
+        }
+      }
+    }
+
+  }
+
+  /////////////////
+  //technologies
+  .technologies {
+    @include flex-row();
+
+    div {
+      @include flex-column();
+      padding-left: 3vh;
+      padding-right: 3vh;
+      @media #{$responsive} {
+        padding-top: 2vh;
+        padding-left: 2vh;
+        padding-right: 2vh;
+      }
+
+      .techno {
+        a {
+          color: white;
+
+          &:hover p {
+            transition: all 0.5s;
+            transform: translateY(0vh);
+            opacity: 1;
+          }
+
+          p {
+            font-size: 2.5vh;
+            transition: all 0.5s;
+            transform: translateY(-3vh);
+            opacity: 0;
+          }
+
+          i {
+            font-size: 16vh;
+            transition: all 0.3s;
+
+            &:hover {
+              color: $color1;
+              transition: all 0.3s;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+/*
+/////////////
+//slide badge
+  .badges {
+    iframe {
+      width: 22vw;
+      height: 21vh;
+      margin-bottom: 2vh;
+      margin-left: 1vh;
+      margin-right: 1vh;
+      border: 0px none;
+
+      @media #{$responsive} {
+        width: 35vw;
+        height: 23vh;
+      }
+    }
+    .badgr {
+      a {
+        color: white;
+        i {
+          font-size: 20vh;
+        }
+        p{
+          font-size: 2.5vh;
+        }
+      }
+    }
+  }
+*/
+
+.quit {
+  //correspond à la croix pour sortir des sections
+  font-size: 5vh;
+  position: absolute;
+  top: 5vh;
+  right: 4vw;
+  transition: all 1s ease-in;
+
+  &:hover {
+    color: $color1;
+    transform: rotate(360deg);
+  }
+}
+
+/////////////
+//Animation//
+/////////////
+
+////////////////////
+//Pour la first-page
+
+.opening {
+  //forwards = reste à l'état final de l'animation après l'avoir exécuter
+  animation: opening 1s 0s ease-in forwards;
+}
+
+.closing {
+  //alternate-reverse = permet de faire l'animation inverse
+  animation: closing 1s 0s ease-in forwards;
+}
+
+@keyframes opening {
+  0% {
+    transform: perspective(100vh) rotateX(0deg);
+    //transform: rotate(0deg);
+  }
+
+  100% {
+    transform: perspective(100vh) rotateX(-30deg);
+    //transform: rotate(360deg);
+  }
+}
+
+@keyframes closing {
+  0% {
+    transform: perspective(100vh) rotateX(-30deg);
+  }
+
+  100% {
+    transform: perspective(100vh) rotateX(0deg);
+  }
+}
+
+/////////////////
+//pour les slides
+
+.up {
+  animation: up 0.5s 0.5s ease-in-out forwards;
+}
+
+.down {
+  animation: down 0.5s 0s ease-out forwards;
+}
+
+@keyframes up {
+  0% {
+    top: 100%;
+  }
+
+  100% {
+    top: 0%;
+  }
+}
+
+@keyframes down {
+  0% {
+    top: 0%;
+  }
+
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

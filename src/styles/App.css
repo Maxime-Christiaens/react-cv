@@ -1,0 +1,644 @@
+h1 {
+  font-size: 10vh;
+  margin-top: 18vh;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  h1 {
+    font-size: 8vh;
+    margin-top: 10vh;
+    margin-bottom: 0vh;
+  }
+}
+
+h2 {
+  font-size: 5.5vh;
+  color: #DAC1A6;
+  font-style: italic;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  h2 {
+    font-size: 4vh;
+    margin-top: 10vh;
+    margin-bottom: 3vh;
+  }
+}
+
+.flex-row-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-column-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.FirstPage {
+  text-align: center;
+  background-color: #223342;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.FirstPage .divButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  .FirstPage .divButton {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.FirstPage .divButton .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-top: 14vh;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  .FirstPage .divButton .buttons {
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+  }
+}
+
+.FirstPage .divButton .buttons:hover h6 {
+  color: #DAC1A6;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.FirstPage .divButton .buttons:nth-child(2) {
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.FirstPage .divButton .buttons h6 {
+  font-size: 4vh;
+  margin: 0;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  .FirstPage .divButton .buttons h6 {
+    font-size: 3.8vh;
+  }
+}
+
+.FirstPage .divButton .buttons i {
+  margin-top: 2vh;
+  font-size: 5vh;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  .FirstPage .divButton .buttons i {
+    font-size: 4vh;
+  }
+}
+
+.FirstPage .divButton .buttons i:hover {
+  color: #c5a793;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+section {
+  background-color: #283C4E;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 100%;
+}
+
+section h2 {
+  margin-top: 10vh !important;
+  color: white;
+  text-transform: uppercase !important;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section h2 {
+    margin-top: 5vh !important;
+  }
+}
+
+section a {
+  text-decoration: none;
+  color: #aaa5a5;
+}
+
+section a:hover {
+  color: #070606;
+  -webkit-transition: all 0.29s;
+  transition: all 0.29s;
+}
+
+section .formation h3 {
+  margin-top: 6vh;
+  margin-bottom: 4vh;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .formation h3 {
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+  }
+}
+
+section .formation h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+section .formation h5 {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .formation h5 {
+    margin-top: 1.2vh;
+    margin-bottom: 1.2vh;
+  }
+}
+
+section .formation .part1 {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+}
+
+section .formation .part1 h3 {
+  font-size: 4.8vh;
+  color: #c5a793;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .formation .part1 h3 {
+    font-size: 3.3vh;
+  }
+}
+
+section .formation .part1 h4 {
+  font-size: 3.3vh;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .formation .part1 h4 {
+    font-size: 2.6vh;
+  }
+}
+
+section .formation .part1 h5 {
+  font-size: 3vh;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .formation .part1 h5 {
+    font-size: 2vh;
+  }
+}
+
+section .formation .part2 {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+section .formation .part2 h3 {
+  font-size: 4.4vh;
+  color: #c5a793;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .formation .part2 h3 {
+    font-size: 3vh;
+  }
+}
+
+section .formation .part2 h4 {
+  font-size: 3vh;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .formation .part2 h4 {
+    font-size: 2.4vh;
+  }
+}
+
+section .formation .part2 h5 {
+  font-size: 2.5vh;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .formation .part2 h5 {
+    font-size: 2vh;
+  }
+}
+
+section .formation .part2 .part2-1 {
+  width: 80%;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .formation .part2 .part2-1 {
+    width: 50%;
+  }
+}
+
+section .formation .part2 .part2-2 {
+  width: 80%;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .formation .part2 .part2-2 {
+    width: 50%;
+  }
+}
+
+section .experience {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  margin-top: 2vh;
+}
+
+section .experience div {
+  margin-bottom: 7vh;
+}
+
+section .experience div h3 {
+  font-size: 4.8vh;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #c5a793;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .experience div h3 {
+    font-size: 3.6vh;
+  }
+}
+
+section .experience div h4 {
+  font-size: 3.3vh;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .experience div h4 {
+    font-size: 2.5vh;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+  }
+}
+
+section .experience div h5 {
+  font-size: 3vh;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .experience div h5 {
+    font-size: 2.5vh;
+  }
+}
+
+section .experience div h5:last-child(2) {
+  margin-bottom: 15vh;
+}
+
+section .technologies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .technologies div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 3vh;
+  padding-right: 3vh;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  section .technologies div {
+    padding-top: 2vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+  }
+}
+
+section .technologies div .techno a {
+  color: white;
+}
+
+section .technologies div .techno a:hover p {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: translateY(0vh);
+          transform: translateY(0vh);
+  opacity: 1;
+}
+
+section .technologies div .techno a p {
+  font-size: 2.5vh;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: translateY(-3vh);
+          transform: translateY(-3vh);
+  opacity: 0;
+}
+
+section .technologies div .techno a i {
+  font-size: 16vh;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+section .technologies div .techno a i:hover {
+  color: #DAC1A6;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/*
+/////////////
+//slide badge
+  .badges {
+    iframe {
+      width: 22vw;
+      height: 21vh;
+      margin-bottom: 2vh;
+      margin-left: 1vh;
+      margin-right: 1vh;
+      border: 0px none;
+
+      @media screen and (min-width: 100px) and (max-width: 768px) {
+        width: 35vw;
+        height: 23vh;
+      }
+    }
+    .badgr {
+      a {
+        color: white;
+        i {
+          font-size: 20vh;
+        }
+        p{
+          font-size: 2.5vh;
+        }
+      }
+    }
+  }
+*/
+.quit {
+  font-size: 5vh;
+  position: absolute;
+  top: 5vh;
+  right: 4vw;
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+}
+
+.quit:hover {
+  color: #DAC1A6;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.opening {
+  -webkit-animation: opening 1s 0s ease-in forwards;
+          animation: opening 1s 0s ease-in forwards;
+}
+
+.closing {
+  -webkit-animation: closing 1s 0s ease-in forwards;
+          animation: closing 1s 0s ease-in forwards;
+}
+
+@-webkit-keyframes opening {
+  0% {
+    -webkit-transform: perspective(100vh) rotateX(0deg);
+            transform: perspective(100vh) rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: perspective(100vh) rotateX(-30deg);
+            transform: perspective(100vh) rotateX(-30deg);
+  }
+}
+
+@keyframes opening {
+  0% {
+    -webkit-transform: perspective(100vh) rotateX(0deg);
+            transform: perspective(100vh) rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: perspective(100vh) rotateX(-30deg);
+            transform: perspective(100vh) rotateX(-30deg);
+  }
+}
+
+@-webkit-keyframes closing {
+  0% {
+    -webkit-transform: perspective(100vh) rotateX(-30deg);
+            transform: perspective(100vh) rotateX(-30deg);
+  }
+  100% {
+    -webkit-transform: perspective(100vh) rotateX(0deg);
+            transform: perspective(100vh) rotateX(0deg);
+  }
+}
+
+@keyframes closing {
+  0% {
+    -webkit-transform: perspective(100vh) rotateX(-30deg);
+            transform: perspective(100vh) rotateX(-30deg);
+  }
+  100% {
+    -webkit-transform: perspective(100vh) rotateX(0deg);
+            transform: perspective(100vh) rotateX(0deg);
+  }
+}
+
+.up {
+  -webkit-animation: up 0.5s 0.5s ease-in-out forwards;
+          animation: up 0.5s 0.5s ease-in-out forwards;
+}
+
+.down {
+  -webkit-animation: down 0.5s 0s ease-out forwards;
+          animation: down 0.5s 0s ease-out forwards;
+}
+
+@-webkit-keyframes up {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+@keyframes up {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+@-webkit-keyframes down {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes down {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=App.css.map */
